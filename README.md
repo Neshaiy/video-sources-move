@@ -20,6 +20,8 @@ Licensed under the Creative Commons CC0 1.0 Universal Public Domain Dedication:
 4. Select the type of movement you want (DVD Bounce, Throw & Bounce, or Random Bounce) and adjust the settings as desired.
 5. Optionally, enable the "Start on scene change" option to automatically start the movement when you switch to a different scene.
 6. Click `OK` to save your settings.
+7. Bind the toggle bounce hotkey on global OBS settings
+8. Apply
 
 ## Support and Contributions
 - If you encounter any issues or have suggestions for improvements, feel free to open an issue or submit a pull request on [GitHub](https://github.com/Neshaiy/video-sources-move).
