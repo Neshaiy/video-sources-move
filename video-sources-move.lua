@@ -1,17 +1,22 @@
 --[[
 ----------------------------------------------------------------------------------------------------------------------------------------
-Open Broadcaster Software®️
-OBS > Tools > Scripts
-'ORIGINAL by insin'
-https://github.com/insin
-'UPDATED by Neshaiy'
+Copyright 2023 Neshaiy
 https://github.com/Neshaiy
-sources-move
-***************************************************************************************************************************************
+
+Licensed under the Creative Commons CC0 1.0 Universal Public Domain Dedication:
+https://creativecommons.org/publicdomain/zero/1.0/
+
+----------------------------------------------------------------------------------------------------------------------------------------
+OBS > Tools > Scripts > video-sources-move
+
 Version 1
-Published / Released: 2023-08-02 05:00
-***************************************************************************************************************************************
+
+This is a Lua script for Open Broadcaster Software®️ (OBS) that allows you to move a selected source (e.g., an image, video, etc.) around its scene in OBS. 
+The script provides various types of movement behaviors, including DVD-style bounce, throw & bounce, and random bounce. 
+The user can choose one of these movement types through the OBS interface.
+----------------------------------------------------------------------------------------------------------------------------------------
 ]]
+
 
 local obs = obslua
 local bit = require('bit')
