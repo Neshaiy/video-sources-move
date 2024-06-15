@@ -338,7 +338,11 @@ function toggle()
         find_scene_item()
         if scene_item then
             active = true
-            if move_type == 'throw_bounce' then
+            if move_type == 'dvd_bounce' then
+                -- Initialize random directions for DVD bounce
+                moving_right = math.random(2) == 1
+                moving_down = math.random(2) == 1
+            elseif move_type == 'throw_bounce' then
                 velocity_x = math.random(-throw_speed_x, throw_speed_x)
                 velocity_y = -math.random(throw_speed_y)
             elseif move_type == 'random_bounce' then
