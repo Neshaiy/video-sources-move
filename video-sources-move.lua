@@ -237,22 +237,30 @@ function move_scene_item(scene_item)
     local pos, width, height = get_scene_item_dimensions(scene_item)
     local next_pos = obs.vec2()
 
-    if moving_right and pos.x + width < scene_width then
-        next_pos.x = math.min(pos.x + speed, scene_width - width)
+    if moving_right then
+        next_pos.x = pos.x + speed
+        if next_pos.x + width >= scene_width then
+            next_pos.x = scene_width - width
+            moving_right = false
+        end
     else
-        moving_right = false
-        next_pos.x = math.max(pos.x - speed, 0)
-        if next_pos.x == 0 then
+        next_pos.x = pos.x - speed
+        if next_pos.x <= 0 then
+            next_pos.x = 0
             moving_right = true
         end
     end
 
-    if moving_down and pos.y + height < scene_height then
-        next_pos.y = math.min(pos.y + speed, scene_height - height)
+    if moving_down then
+        next_pos.y = pos.y + speed
+        if next_pos.y + height >= scene_height then
+            next_pos.y = scene_height - height
+            moving_down = false
+        end
     else
-        moving_down = false
-        next_pos.y = math.max(pos.y - speed, 0)
-        if next_pos.y == 0 then
+        next_pos.y = pos.y - speed
+        if next_pos.y <= 0 then
+            next_pos.y = 0
             moving_down = true
         end
     end
